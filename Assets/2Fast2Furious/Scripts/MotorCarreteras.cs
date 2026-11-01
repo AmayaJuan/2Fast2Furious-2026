@@ -6,10 +6,14 @@ public class MotorCarreteras : MonoBehaviour
     public GameObject contenedorCallesGO;
     public GameObject calleAnterior;
     public GameObject calleNueva;
+    public GameObject mCamGO;
+    public Camera mCamComp;
     public float velocidad;
     public float tamañoCalle;
     public bool inicioJuego;
-    public bool JuegoTerminado;
+    public bool juegoTerminado;
+    public bool salioDePantalla;
+    public Vector3 medidaLimitePantalla;
 
     int contadorCalles = 0;
     int numeroSelectorCalles;
@@ -22,7 +26,10 @@ public class MotorCarreteras : MonoBehaviour
     void InicioJuego()
     {
         contenedorCallesGO = GameObject.Find("ContenedorCalles");
+        mCamGO = GameObject.Find("Main Camera");
+        mCamComp = mCamGO.GetComponent<Camera>();
         VelocidadMotorCarretera();
+        MedirPantalla();
         BuscoCalles();
     }
 
@@ -60,6 +67,8 @@ public class MotorCarreteras : MonoBehaviour
         calleNueva = GameObject.Find("Calle" + contadorCalles);
         MidoCalle();
         calleNueva.transform.position = new Vector3(calleAnterior.transform.position.x, calleAnterior.transform.position.y + tamañoCalle, 0);
+
+        salioDePantalla = false;
     } 
 
     void MidoCalle()
@@ -74,9 +83,27 @@ public class MotorCarreteras : MonoBehaviour
         }
     }
 
+    void MedirPantalla()
+    {
+        medidaLimitePantalla = new Vector3(0, mCamComp.ScreenToWorldPoint(new Vector3(0, 0, 0)).y -0.5f, 0);
+    }
+
     void Update()
     {
-        if (inicioJuego == true && JuegoTerminado == false)
+        if (inicioJuego == true && juegoTerminado == false)
             transform.Translate(Vector3.down * velocidad * Time.deltaTime);
+        if (calleAnterior.transform.position.y + tamañoCalle < medidaLimitePantalla.y && salioDePantalla == false)
+        {
+            salioDePantalla = true;
+            DestruyoCalles();
+        }
+    }
+
+    void DestruyoCalles()
+    {
+        Destroy(calleAnterior);
+        tamañoCalle = 0;
+        calleAnterior = null;
+        CrearCalles();
     }
 }
