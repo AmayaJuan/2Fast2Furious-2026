@@ -144,7 +144,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CalleRecta
+      name: Calles_0
       rect:
         serializedVersion: 2
         x: 0
@@ -152,15 +152,15 @@ TextureImporter:
         width: 1024
         height: 576
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 02305410000000000800000000000000
-      internalID: 21300000
+      spriteID: a23ff7c24752f5749a03e79c647e1aea
+      internalID: -15650227
       vertices: []
       indices: 
       edges: []
@@ -174,14 +174,14 @@ TextureImporter:
         width: 1024
         height: 576
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 22305410000000000800000000000000
+      spriteID: ebe451e230af7c64a9db9186341995ce
       internalID: 21300002
       vertices: []
       indices: 
@@ -196,14 +196,14 @@ TextureImporter:
         width: 1024
         height: 576
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 42305410000000000800000000000000
+      spriteID: 619505cc243b1ef4eb2a2a6936e141f3
       internalID: 21300004
       vertices: []
       indices: 
@@ -218,14 +218,14 @@ TextureImporter:
         width: 1024
         height: 576
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 62305410000000000800000000000000
+      spriteID: 231c3ff24e090e647a4e9e1cd0e302d7
       internalID: 21300006
       vertices: []
       indices: 
@@ -240,21 +240,21 @@ TextureImporter:
         width: 1024
         height: 576
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 82305410000000000800000000000000
+      spriteID: e3c4d16c9aa98c045b3a541f1eecec40
       internalID: 21300008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bus
+      name: Calles_5
       rect:
         serializedVersion: 2
         x: 1185
@@ -262,21 +262,21 @@ TextureImporter:
         width: 137
         height: 362
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a2305410000000000800000000000000
-      internalID: 21300010
+      spriteID: e8afdafd165024141982dbbeeb3067f4
+      internalID: 1413174668
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Coche
+      name: Calles_6
       rect:
         serializedVersion: 2
         x: 1516
@@ -284,15 +284,15 @@ TextureImporter:
         width: 99
         height: 159
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c2305410000000000800000000000000
-      internalID: 21300012
+      spriteID: a59ed3768822d974eb5ca2c85389b8df
+      internalID: -1298951991
       vertices: []
       indices: 
       edges: []
@@ -301,7 +301,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -311,13 +311,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bus: 21300010
-      CalleRecta: 21300000
+      Calles_0: -15650227
       Calles_1: 21300002
       Calles_2: 21300004
       Calles_3: 21300006
       Calles_4: 21300008
-      Coche: 21300012
+      Calles_5: 1413174668
+      Calles_6: -1298951991
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
