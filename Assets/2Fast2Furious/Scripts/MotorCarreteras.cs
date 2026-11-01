@@ -58,9 +58,11 @@ public class MotorCarreteras : MonoBehaviour
     {
         calleAnterior = GameObject.Find("Calle" + (contadorCalles - 1));
         calleNueva = GameObject.Find("Calle" + contadorCalles);
-    }
+        MidoCalle();
+        calleNueva.transform.position = new Vector3(calleAnterior.transform.position.x, calleAnterior.transform.position.y + tamañoCalle, 0);
+    } 
 
-    void midoCalle()
+    void MidoCalle()
     {
         for (int i = 0; i < calleAnterior.transform.childCount; i++)
         {
