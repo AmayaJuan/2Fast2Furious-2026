@@ -7,6 +7,9 @@ public class MotorCarreteras : MonoBehaviour
     public GameObject calleAnterior;
     public GameObject calleNueva;
     public GameObject mCamGO;
+    public GameObject cocheGO;
+    public GameObject audioFXGO;
+    public GameObject bgFinalGO;
     public Camera mCamComp;
     public float velocidad;
     public float tamañoCalle;
@@ -14,6 +17,7 @@ public class MotorCarreteras : MonoBehaviour
     public bool juegoTerminado;
     public bool salioDePantalla;
     public Vector3 medidaLimitePantalla;
+    public AudioFX audioFXScript;
 
     int contadorCalles = 0;
     int numeroSelectorCalles;
@@ -28,9 +32,25 @@ public class MotorCarreteras : MonoBehaviour
         contenedorCallesGO = GameObject.Find("ContenedorCalles");
         mCamGO = GameObject.Find("Main Camera");
         mCamComp = mCamGO.GetComponent<Camera>();
+
+        bgFinalGO = GameObject.Find("PanelGameOver");
+        bgFinalGO.SetActive(false);
+
+        audioFXGO = GameObject.Find("AudioFX");
+        audioFXScript = audioFXGO.GetComponent<AudioFX>();
+
+        cocheGO = GameObject.FindFirstObjectByType<Coche>().gameObject;
+
         VelocidadMotorCarretera();
         MedirPantalla();
         BuscoCalles();
+    }
+
+    public void JuegoTerminadoEstados()
+    {
+        cocheGO.GetComponent<AudioSource>().Stop();
+        audioFXScript.FXMusic();
+        bgFinalGO.SetActive(true);
     }
 
     void VelocidadMotorCarretera()

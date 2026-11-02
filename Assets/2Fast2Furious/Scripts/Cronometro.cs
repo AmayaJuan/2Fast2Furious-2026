@@ -10,6 +10,7 @@ public class Cronometro : MonoBehaviour
     public float distancia;
     public Text txtTiempo;
     public Text txtDistancia;
+    public Text txtDistanciaFinal;
 
     void Start()
     {
@@ -30,6 +31,8 @@ public class Cronometro : MonoBehaviour
         if (tiempo <= 0 && motorCarreteraScript.juegoTerminado == false)
         {
             motorCarreteraScript.juegoTerminado = true;
+            motorCarreteraScript.JuegoTerminadoEstados();
+            txtDistanciaFinal.text = ((int)distancia).ToString() + " mts";
         }
     }
 
